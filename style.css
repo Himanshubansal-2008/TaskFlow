@@ -1,0 +1,144 @@
+:root {
+    --heading-color: #3a3b98;
+    --pending-color: #818cf8;
+
+
+}
+
+.light {
+    --bg-color: #f1f5f9;
+    --container-color: #fdfdfe;
+    --text-color: black;
+    --border-color: #c7d2fe;
+    
+}
+
+.dark {
+    --bg-color: #1a1a1a;
+    --container-color: #1b2538;
+    --text-color: white;
+    --border-color: #c7d2fe;
+}
+
+body {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+h1, p {
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    margin: 50px auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.headerleft {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#brand {
+    color: var(--heading-color);
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+#currentdate {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.headerright {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-toggle {
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#pending {
+    background-color: #e0e7ff;
+    color: var(--pending-color);
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 0 25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .headerright {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    #brand {
+        font-size: 2.5rem;
+    }
+
+    #currentdate {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+        margin: 20px auto;
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    #brand {
+        font-size: 2rem;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    #pending {
+        height: 40px;
+        padding: 0 15px;
+        font-size: 1rem;
+    }
+}
