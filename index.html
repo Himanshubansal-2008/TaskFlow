@@ -18,6 +18,45 @@
                 <div id="pending">Pending</div>
             </div>
         </div>
+    <div class="controls-section glass-panel">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+        </div>
+        <div class="filters">
+            <select id="filterSelect">
+                <option value="all">All Tasks</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="high">High Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="low">Low Priority</option>
+            </select>
+            <select id="sortSelect">
+                <option value="default">Sort: Default</option>
+                <option value="dueDateAsc">Due Date (Earliest)</option>
+                <option value="dueDateDesc">Due Date (Latest)</option>
+            </select>
+        </div>
+    </div>
+    <form id="taskForm" class="add-task-section glass-panel">
+        <input type="text" id="taskTitle" placeholder="What needs to be done?" required autocomplete="off">
+        <div class="task-options">
+            <div class="option-group">
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority">
+                    <option value="low">🔵 Low</option>
+                    <option value="medium" selected>🟡 Medium</option>
+                    <option value="high">🔴 High</option>
+                </select>
+            </div>
+            <div class="option-group">
+                <label for="taskDate">Due Date <span class="optional">(Optional)</span></label>
+                <input type="date" id="taskDate">
+            </div>
+            <button type="submit" class="primary-btn">Add Task</button>
+        </div>
+    </form>
 
     </div>
     <script src="./script.js"></script>
